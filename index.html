@@ -232,11 +232,11 @@
     document.querySelectorAll(".tag .label").forEach(el => {
       data.push(el.textContent.trim());
     });
-    localStorage.setItem("wordList", JSON.stringify(data));
+    localStorage.setItem("lldList", JSON.stringify(data));
   }
 
   function loadAll() {
-    const data = JSON.parse(localStorage.getItem("wordList") || "[]");
+    const data = JSON.parse(localStorage.getItem("lldList") || "[]");
     data.forEach(word => {
       const dotCount = getDotCount(word);
       const tag = createTag(word);
